@@ -1,0 +1,51 @@
+/* Navbar Styling */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #ffc107 !important;
+}
+
+.nav-link {
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ffc107 !important;
+}
+
+/* Language buttons styling */
+.navbar .btn-outline-light:hover {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #000 !important;
+}
+
+.navbar .btn-light {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #000 !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 991px) {
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  .nav-link {
+    margin: 5px 0;
+  }
+}

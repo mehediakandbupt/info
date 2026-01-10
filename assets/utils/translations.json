@@ -1,0 +1,64 @@
+{
+  "en": {
+    "navbar": {
+      "brand": "HASAN MOHAMMAD MEHEDI",
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "publications": "Publications",
+      "contact": "Contact"
+    },
+    "home": {
+      "title": "Welcome",
+      "subtitle": "I am a passionate developer and researcher",
+      "cta": "Learn More"
+    },
+    "about": {
+      "title": "About Me",
+      "content": "Information about yourself goes here"
+    },
+    "projects": {
+      "title": "Projects",
+      "content": "Your projects go here"
+    },
+    "publications": {
+      "title": "Publications",
+      "content": "Your publications go here"
+    },
+    "contact": {
+      "title": "Contact Me",
+      "content": "Contact information goes here"
+    }
+  },
+  "zh": {
+    "navbar": {
+      "brand": "哈桑·穆罕默德·梅赫迪",
+      "home": "主页",
+      "about": "关于",
+      "projects": "项目",
+      "publications": "出版物",
+      "contact": "联系"
+    },
+    "home": {
+      "title": "欢迎",
+      "subtitle": "我是一名充满激情的开发者和研究员",
+      "cta": "了解更多"
+    },
+    "about": {
+      "title": "关于我",
+      "content": "关于自己的信息放在这里"
+    },
+    "projects": {
+      "title": "项目",
+      "content": "您的项目放在这里"
+    },
+    "publications": {
+      "title": "出版物",
+      "content": "您的出版物放在这里"
+    },
+    "contact": {
+      "title": "联系我",
+      "content": "联系信息放在这里"
+    }
+  }
+}
