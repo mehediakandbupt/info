@@ -69,19 +69,19 @@ class LanguageManager {
             <!-- Menu (Middle) -->
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#home">${this.t('navbar.home')}</a>
+                <a class="nav-link" href="index.html">${this.t('navbar.home')}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about">${this.t('navbar.about')}</a>
+                <a class="nav-link" href="about.html">${this.t('navbar.about')}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#projects">${this.t('navbar.projects')}</a>
+                <a class="nav-link" href="projects.html">${this.t('navbar.projects')}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#publications">${this.t('navbar.publications')}</a>
+                <a class="nav-link" href="publications.html">${this.t('navbar.publications')}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">${this.t('navbar.contact')}</a>
+                <a class="nav-link" href="contact.html">${this.t('navbar.contact')}</a>
               </li>
             </ul>
             
