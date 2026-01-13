@@ -8,6 +8,25 @@
       "publications": "Publications",
       "contact": "Contact"
     },
+    "hero": {
+      "name": "Hasan Mohammad Mehedi",
+      "title": "Full-Stack Developer & Researcher",
+      "bio": "I am an AI and computer vision engineer focused on automation and building reliable solutions for industrial inspection and data driven decision making. My experience includes defect detection, segmentation, retrieval, and incremental learning, using deep learning models such as CNNs and Vision Transformers. I develop complete workflows covering data preparation, model training, evaluation, deployment, and system integration to improve quality control, efficiency, and operational stability. I also build Generative AI applications, including LLM based and multi agent workflows such as CrewAI, to automate information search, analysis, documentation, and structured reporting. I work closely with cross functional teams and aim to deliver practical systems that are scalable, accurate, and ready for real world use.",
+      "viewWork": "View My Work",
+      "getInTouch": "Get In Touch"
+    },
+    "profile": {
+      "nationality": "Nationality",
+      "nationalityValue": "Bangladesh",
+      "age": "Age",
+      "ageValue": "31",
+      "email": "Email",
+      "emailValue": "mehediakand@outlook.com",
+      "phone": "Phone",
+      "phoneValue": "+86 131 46128600",
+      "location": "Location",
+      "locationValue": "Beijing, China"
+    },
     "home": {
       "title": "Welcome",
       "subtitle": "I am a passionate developer and researcher",
@@ -32,12 +51,31 @@
   },
   "zh": {
     "navbar": {
-      "brand": "哈桑·穆罕默德·梅赫迪",
+      "brand": "Hasan Mohammad Mehedi",
       "home": "主页",
       "about": "关于",
       "projects": "项目",
       "publications": "出版物",
       "contact": "联系"
+    },
+    "hero": {
+      "name": "Hasan Mohammad Mehedi",
+      "title": "全栈开发者 & 研究员",
+      "bio": "我是一名人工智能与计算机视觉工程师，专注于自动化以及面向工业检测与数据驱动决策的可靠解决方案开发。我的研究与实践涵盖缺陷检测、缺陷分割、相似检索与增量学习，并应用卷积神经网络（CNN）与视觉Transformer（ViT）等深度学习模型。具备从数据准备、模型训练与评估到部署落地与系统集成的全流程开发经验，致力于提升质量管控、生产效率与系统稳定性。同时，我也开展生成式人工智能应用开发，包括基于大语言模型（LLM）的多智能体协同工作流（如 CrewAI），用于自动化信息检索、分析、文档整理与结构化报告生成。我擅长跨团队协作，目标是交付可扩展、高精度、可工程化落地的实际系统。",
+      "viewWork": "查看我的作品",
+      "getInTouch": "联系我"
+    },
+    "profile": {
+      "nationality": "国籍",
+      "nationalityValue": "孟加拉国",
+      "age": "年龄",
+      "ageValue": "31",
+      "email": "邮箱",
+      "emailValue": "mehediakand@outlook.com",
+      "phone": "电话",
+      "phoneValue": "+86 131 46128600",
+      "location": "位置",
+      "locationValue": "北京市"
     },
     "home": {
       "title": "欢迎",
