@@ -1,0 +1,104 @@
+{
+  "publications": [
+    {
+      "id": "pub-001",
+      "type": "journal",
+      "title": "Efficient Dual-Attention-Based Knowledge Distillation Network for Unsupervised Wafer Map Anomaly Detection",
+      "journal": "IEEE Transactions on Semiconductor Manufacturing",
+      "impactFactor": "2.3",
+      "sciQuartile": "Q1",
+      "date": "2024-6",
+      "doi": "https://doi.org/10.1109/TSM.2024.3416055",
+      "authors": ["Hasan Mohammad Mehedi", "Naigong Yu", "Imran Khan Mirani"],
+      "abstract": {
+        "en": "Detecting wafer map anomalies is crucial for preventing yield loss in semiconductor fabrication, although intricate patterns and resource-intensive labeled data prerequisites hinder precise deep-learning segmentation. This paper presents an innovative, unsupervised method for detecting pixel-level anomalies in wafer maps. It utilizes an efficient dual attention module with a knowledge distillation network to learn defect distributions without anomalies. Knowledge transfer is achieved by distilling information from a pre-trained teacher into a student network with similar architecture, except an efficient dual attention module is incorporated atop the teacher network’s feature pyramid hierarchies, which enhances feature representation and segmentation across pyramid hierarchies that selectively emphasize relevant and discard irrelevant features by capturing contextual associations in positional and channel dimensions. Furthermore, it enables student networks to acquire an improved knowledge of hierarchical features to identify anomalies across different scales accurately. The dissimilarity in feature pyramids acts as a discriminatory function, predicting the likelihood of an abnormality, resulting in highly accurate pixel-level anomaly detection. Consequently, our proposed method excelled on the WM-811K and MixedWM38 datasets, achieving AUROC, AUPR, AUPRO, and F1-Scores of (99.65%, 99.35%), (97.31%, 92.13%), (90.76%, 84.66%) respectively, alongside an inference speed of 3.204 FPS, showcasing its high precision and efficiency.",
+        "zh": "晶圆图异常检测对于防止半导体制造中的良率损失至关重要，然而，复杂的图样以及对资源密集型标注数据前提的依赖，阻碍了深度学习分割的精确实现。本文提出一种创新的、无监督的晶圆图像素级异常检测方法。该方法利用一种高效的双重注意力模块与知识蒸馏网络，在不含异常的条件下学习缺陷分布。知识迁移通过将预训练教师网络中的信息蒸馏到具有相似架构的学生网络中来实现；不同之处在于，在教师网络的特征金字塔层级之上引入了一个高效双重注意力模块，该模块增强了跨金字塔层级的特征表示与分割能力，并通过在位置与通道维度捕获上下文关联，选择性地强调相关特征并丢弃不相关特征。此外，它使学生网络能够获得对层级特征更完善的知识，从而在不同尺度上准确识别异常。特征金字塔间的差异作为判别函数，用于预测异常发生的可能性，从而实现高精度的像素级异常检测。因此，所提出方法在 WM-811K 与 MixedWM38 数据集上表现优异，AUROC、AUPR、AUPRO 以及 F1-Score 分别达到（99.65%、99.35%）、（97.31%、92.13%）、（90.76%、84.66%），同时推理速度为 3.204 FPS，表明该方法具备高精度与高效率。"
+      }
+    },
+    {
+      "id": "pub-002",
+      "type": "conference",
+      "title": "Feature-Scale Attentive Pseudo-Labeling for Semi-Supervised Wafer Map Defect Segmentation",
+      "conference": "2025 10th International Conference on Signal and Image Processing (ICSIP)",
+      "location": "Wuxi, China",
+      "eiIndexed": true,
+      "date": "2025-07",
+      "doi": "https://doi.org/10.1109/ICSIP65915.2025.11171457",
+      "authors": ["Hasan Mohammad Mehedi", "Naigong Yu", "Imran Khan Mirani", "Md Mizanur Rahman Mustakim"],
+      "abstract": {
+        "en": "Accurate segmentation of wafer map defects is essential for ensuring the quality and reliability of semiconductor manufacturing. However, it is challenged by the complex nature of defect patterns and the scarcity of labeled data. This paper introduces a novel semi-supervised method for wafer map defect segmentation that leverages feature-scale attentive pseudolabeling. Our approach incorporates a cross-attention mechanism across multiple feature scales to enhance the quality of pseudolabels, thereby improving segmentation accuracy. By refining features at different scales, our method minimizes misclassification and accurately identifies diverse defect patterns. Experiments on the MixedWM38 dataset show our method substantially surpasses state-of-the-art techniques, achieving approximately 12 % higher mIoU and 10 % higher F1-score. Additionally, we evaluate our method on the Pascal VOC 2012 dataset to validate its generalization capability, achieving improvements of 5.6 % in mIoU and 3.2 % in Dice score. These results highlight the potential of our approach to significantly improve the precision and reliability of wafer map defect segmentation in semiconductor fabrication.",
+        "zh": "晶圆图缺陷的精确分割对于保障半导体制造的质量与可靠性至关重要。然而，缺陷图案的复杂性以及标注数据的稀缺性为此带来了挑战。本文提出一种新颖的用于晶圆图缺陷分割的半监督方法，该方法利用特征尺度注意力伪标签技术。我们的方法通过在多个特征尺度间引入交叉注意力机制来提升伪标签的质量，从而有效提高分割精度。借助对不同尺度特征的细化，该方法能够减少误分类并准确识别多样的缺陷形态。在MixedWM38数据集上的实验表明，我们的方法显著超越了现有最佳技术，平均交并比(mIoU)提升约12%，F1分数提升约10%。此外，为验证其泛化能力，我们在Pascal VOC 2012数据集上进行了评估，取得了mIoU提升5.6%、Dice分数提升3.2%的改进。这些结果凸显了我们的方法在提升半导体制造中晶圆图缺陷分割的精度与可靠性方面的巨大潜力。"
+      }
+    },
+    {
+      "id": "pub-003",
+      "type": "conference",
+      "title": "Zero-Shot Wafer Map Defect Pattern Retrieval Using Multi-Scale Attention-Enhanced Vision Transformers and Composite Metric Learning",
+      "conference": "2025 Asian Conference on Artificial Intelligence Technology (ACAIT2025)",
+      "location": "Ordos, China",
+      "eiIndexed": true,
+      "date": "2025-09",
+      "doi": "",
+      "authors": ["Hasan Mohammad Mehedi", "Naigong Yu", "Imran Khan Mirani"],
+      "abstract": {
+        "en": "In semiconductor manufacturing, effectively retrieving wafer map defect patterns is essential for streamlining production and improving yield. However, the sheer volume and variability of defect data and the continuous emergence of novel categories render manual analysis infeasible, necessitating automated solutions for scalable defect retrieval. This paper proposes a zero-shot wafer-map retrieval framework that learns multi-scale representations by fusing aggregated attention maps and embeddings from a dual-branch Vision Transformer, enabling spatially guided focus on salient defect regions. In addition, integrating a composite loss function that combines curriculum learning with proxy-based metric learning significantly strengthens the model's adaptability to new and evolving defect types, enabling consistent retrieval of previously unseen defect patterns. Experimental results on the WM-811K and MixedWM38 datasets highlight the effectiveness of our approach, with Recall@1 scores of 0.921 and 0.782, Recall@8 scores of 0.985 and 0.961, and NMI values of 0.452 and 0.648, respectively, consistently surpassing previous state-of-the-art (SOTA) techniques in both retrieval accuracy and clustering quality.",
+        "zh": "在半导体制造中，有效检索晶圆图缺陷图案对于优化生产流程与提升良率至关重要。然而，缺陷数据的海量性、多样性以及新缺陷类别的持续涌现，使得人工分析难以实现，亟需自动化的解决方案以实现可扩展的缺陷检索。本文提出一种零样本晶圆图检索框架，通过融合来自双分支视觉变换器的聚合注意力图与嵌入表示，学习多尺度特征表示，从而实现对显著缺陷区域的空间引导聚焦。此外，结合课程学习与基于代理的度量学习的复合损失函数，显著增强了模型对新出现及演变的缺陷类型的适应能力，使其能够稳定检索前所未见的缺陷图案。在WM-811K与MixedWM38数据集上的实验结果表明，该方法具有显著优势，其Recall@1分数分别达到0.921和0.782，Recall@8分数分别为0.985和0.961，NMI值分别为0.452和0.648，在检索精度与聚类质量两方面均持续超越先前的最先进技术。"
+      }
+    },
+    {
+      "id": "pub-004",
+      "type": "journal",
+      "title": "Feature extraction and fusion algorithm for infrared visible light images based on residual and generative adversarial network",
+      "journal": "Image and Vision Computing",
+      "impactFactor": "4.2",
+      "sciQuartile": "Q1",
+      "date": "2024-11",
+      "doi": "https://doi.org/10.1016/j.imavis.2024.105346",
+      "authors": ["Naigong Yu", "YiFan Fu", "QiuSheng Xie", "QiMing Cheng", "Mohammad Mehedi Hasan"],
+      "abstract": {
+        "en": "With the application and popularization of depth cameras, image fusion techniques based on infrared and visible light are increasingly used in various fields. Object detection and robot navigation impose more stringent requirements on the texture details and image quality of fused images. Existing residual network, attention mechanisms, and generative adversarial network are ineffective in dealing with the image fusion problem because of insufficient detail feature extraction and non-conformity to the human visual perception system during the fusion of infrared and visible light images. Our newly developed RGFusion network relies on a two-channel attentional mechanism, a residual network, and a generative adversarial network that introduces two new components: a high-precision image feature extractor and an efficient multi-stage training strategy. The network is preprocessed by a high-dimensional mapping and the complex feature extractor is processed through a sophisticated two-stage image fusion process to obtain feature structures with multiple features, resulting in high-quality fused images rich in detailed features. Extensive experiments on public datasets validate this fusion approach, and RGFusion is at the forefront of SD metrics for EN and SF, reaching 7.366, 13.322, and 49.281 on the TNO dataset and 7.276, 19.171, and 53.777 on the RoadScene dataset, respectively.",
+        "zh": "随着深度相机的应用与普及，基于红外与可见光的图像融合技术日益广泛地应用于各领域。目标检测与机器人导航对融合图像的纹理细节与图像质量提出了更高要求。现有残差网络、注意力机制与生成对抗网络在红外与可见光图像融合中存在细节特征提取不足、融合结果不符合人类视觉感知系统等问题，难以有效处理图像融合任务。我们提出的RGFusion网络基于双通道注意力机制、残差网络与生成对抗网络构建，并引入了两个新模块：高精度图像特征提取器与高效的多阶段训练策略。该网络通过高维映射进行预处理，并借助精细的两阶段图像融合流程处理复杂特征提取器，从而获得具有多重特征的特征结构，最终生成富含细节特征的高质量融合图像。在公开数据集上的大量实验验证了该融合方法的有效性，RGFusion在SD、EN、SF等指标上均处于领先水平，在TNO数据集上分别达到7.366、13.322、49.281，在RoadScene数据集上分别达到7.276、19.171、53.777。"
+      }
+    }
+  ],
+  "labels": {
+    "en": {
+      "sectionTitle": "Publications",
+      "type": "Type",
+      "journalArticle": "Journal Article",
+      "conferencePaper": "Conference Paper",
+      "journal": "Journal",
+      "conference": "Conference",
+      "location": "Location",
+      "impactFactor": "Impact Factor",
+      "publicationDate": "Publication Date",
+      "doi": "DOI",
+      "abstract": "Abstract",
+      "authors": "Authors",
+      "sciQ1": "SCI Q1",
+      "sciQ2": "SCI Q2",
+      "sciQ3": "SCI Q3",
+      "sciQ4": "SCI Q4",
+      "eiIndexed": "EI Indexed"
+    },
+    "zh": {
+      "sectionTitle": "学术论文",
+      "type": "类型",
+      "journalArticle": "期刊论文",
+      "conferencePaper": "会议论文",
+      "journal": "期刊",
+      "conference": "会议",
+      "location": "地点",
+      "impactFactor": "影响因子",
+      "publicationDate": "发表日期",
+      "doi": "DOI",
+      "abstract": "摘要",
+      "authors": "作者",
+      "sciQ1": "SCI Q1",
+      "sciQ2": "SCI Q2",
+      "sciQ3": "SCI Q3",
+      "sciQ4": "SCI Q4",
+      "eiIndexed": "EI 收录"
+    }
+  }
+}

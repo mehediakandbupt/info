@@ -3,6 +3,7 @@ class LanguageManager {
   constructor() {
     this.currentLang = this.getStoredLanguage() || 'en';
     this.translations = {};
+    this.publicationsData = null;
     this.init();
   }
 
@@ -13,6 +14,7 @@ class LanguageManager {
       this.translations = await response.json();
       this.loadNavbar();
       this.loadHero();
+      this.loadPublications();
       this.updatePageContent();
     } catch (error) {
       console.error('Error loading translations:', error);
@@ -31,6 +33,7 @@ class LanguageManager {
       localStorage.setItem('language', lang);
       this.loadNavbar();
       this.loadHero();
+      this.loadPublications();
       this.updatePageContent();
     }
   }
@@ -184,6 +187,116 @@ class LanguageManager {
     `;
 
     heroContainer.innerHTML = heroHTML;
+  }
+
+  // Load publications from JSON file
+  async loadPublications() {
+    const publicationsContainer = document.getElementById('publications-list');
+    const publicationsTitle = document.getElementById('publications-title');
+    if (!publicationsContainer) return;
+
+    try {
+      // Load publications data if not already loaded
+      if (!this.publicationsData) {
+        const response = await fetch('assets/utils/publications.json');
+        this.publicationsData = await response.json();
+      }
+
+      const { publications, labels } = this.publicationsData;
+      const lang = this.currentLang;
+      const l = labels[lang];
+
+      // Update section title
+      if (publicationsTitle) {
+        publicationsTitle.textContent = l.sectionTitle;
+      }
+
+      // Generate HTML for each publication
+      let html = '';
+      publications.forEach(pub => {
+        const isJournal = pub.type === 'journal';
+        const badge = isJournal 
+          ? `<span class="impact-badge impact-${pub.sciQuartile.toLowerCase()}">${l['sci' + pub.sciQuartile.toUpperCase()]}</span>`
+          : (pub.eiIndexed ? `<span class="ei-badge">${l.eiIndexed}</span>` : '');
+
+        const formattedDate = this.formatDate(pub.date, lang);
+        const abstract = pub.abstract[lang] || pub.abstract['en'];
+
+        html += `
+          <div class="publication-item">
+            <div class="publication-header" onclick="togglePublication(this)">
+              <h3 class="publication-title">
+                <i class="fas fa-chevron-down expand-icon"></i>
+                ${pub.title}
+              </h3>
+              <div class="publication-badges">
+                ${badge}
+              </div>
+            </div>
+            <div class="publication-body" style="display: none;">
+              <div class="publication-meta">
+                <div class="row">
+                  <div class="col-md-3 col-sm-6 col-12">
+                    <div class="meta-item">
+                      <span class="meta-label">${l.type}</span>
+                      <span class="meta-value">
+                        <i class="fas ${isJournal ? 'fa-book' : 'fa-users'}"></i> 
+                        ${isJournal ? l.journalArticle : l.conferencePaper}
+                      </span>
+                    </div>
+                    <div class="meta-item mt-3">
+                      <span class="meta-label">${l.doi}</span>
+                      <span class="meta-value">
+                        <a href="https://doi.org/${pub.doi}" target="_blank">${pub.doi}</a>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-sm-6 col-12">
+                    <div class="meta-item">
+                      <span class="meta-label">${isJournal ? l.journal : l.conference}</span>
+                      <span class="meta-value">${isJournal ? pub.journal : pub.conference}</span>
+                    </div>
+                  </div>
+                  <div class="col-md-2 col-sm-6 col-6">
+                    <div class="meta-item">
+                      <span class="meta-label">${isJournal ? l.impactFactor : l.location}</span>
+                      <span class="meta-value">${isJournal ? pub.impactFactor : `<i class="fas fa-map-marker-alt"></i> ${pub.location}`}</span>
+                    </div>
+                  </div>
+                  <div class="col-md-2 col-sm-6 col-6">
+                    <div class="meta-item">
+                      <span class="meta-label">${l.publicationDate}</span>
+                      <span class="meta-value"><i class="fas fa-calendar-alt"></i> ${formattedDate}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="abstract-section">
+                <span class="abstract-label">${l.abstract}</span>
+                <p class="abstract-text">${abstract}</p>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      publicationsContainer.innerHTML = html;
+    } catch (error) {
+      console.error('Error loading publications:', error);
+      publicationsContainer.innerHTML = '<p class="text-center text-muted">Failed to load publications.</p>';
+    }
+  }
+
+  // Format date based on language
+  formatDate(dateStr, lang) {
+    const [year, month] = dateStr.split('-');
+    const date = new Date(year, parseInt(month) - 1);
+    
+    if (lang === 'zh') {
+      return `${year}年${month}月`;
+    } else {
+      return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+    }
   }
 
   // Helper method to load component from file
