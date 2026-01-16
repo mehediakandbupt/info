@@ -9,7 +9,7 @@
       "sciQuartile": "Q1",
       "date": "2024-6",
       "doi": "https://doi.org/10.1109/TSM.2024.3416055",
-      "authors": ["Hasan Mohammad Mehedi", "Naigong Yu", "Imran Khan Mirani"],
+      "authors": ["Mohammad Mehedi Hasan", "Naigong Yu", "Imran Khan Mirani"],
       "abstract": {
         "en": "Detecting wafer map anomalies is crucial for preventing yield loss in semiconductor fabrication, although intricate patterns and resource-intensive labeled data prerequisites hinder precise deep-learning segmentation. This paper presents an innovative, unsupervised method for detecting pixel-level anomalies in wafer maps. It utilizes an efficient dual attention module with a knowledge distillation network to learn defect distributions without anomalies. Knowledge transfer is achieved by distilling information from a pre-trained teacher into a student network with similar architecture, except an efficient dual attention module is incorporated atop the teacher network’s feature pyramid hierarchies, which enhances feature representation and segmentation across pyramid hierarchies that selectively emphasize relevant and discard irrelevant features by capturing contextual associations in positional and channel dimensions. Furthermore, it enables student networks to acquire an improved knowledge of hierarchical features to identify anomalies across different scales accurately. The dissimilarity in feature pyramids acts as a discriminatory function, predicting the likelihood of an abnormality, resulting in highly accurate pixel-level anomaly detection. Consequently, our proposed method excelled on the WM-811K and MixedWM38 datasets, achieving AUROC, AUPR, AUPRO, and F1-Scores of (99.65%, 99.35%), (97.31%, 92.13%), (90.76%, 84.66%) respectively, alongside an inference speed of 3.204 FPS, showcasing its high precision and efficiency.",
         "zh": "晶圆图异常检测对于防止半导体制造中的良率损失至关重要，然而，复杂的图样以及对资源密集型标注数据前提的依赖，阻碍了深度学习分割的精确实现。本文提出一种创新的、无监督的晶圆图像素级异常检测方法。该方法利用一种高效的双重注意力模块与知识蒸馏网络，在不含异常的条件下学习缺陷分布。知识迁移通过将预训练教师网络中的信息蒸馏到具有相似架构的学生网络中来实现；不同之处在于，在教师网络的特征金字塔层级之上引入了一个高效双重注意力模块，该模块增强了跨金字塔层级的特征表示与分割能力，并通过在位置与通道维度捕获上下文关联，选择性地强调相关特征并丢弃不相关特征。此外，它使学生网络能够获得对层级特征更完善的知识，从而在不同尺度上准确识别异常。特征金字塔间的差异作为判别函数，用于预测异常发生的可能性，从而实现高精度的像素级异常检测。因此，所提出方法在 WM-811K 与 MixedWM38 数据集上表现优异，AUROC、AUPR、AUPRO 以及 F1-Score 分别达到（99.65%、99.35%）、（97.31%、92.13%）、（90.76%、84.66%），同时推理速度为 3.204 FPS，表明该方法具备高精度与高效率。"
@@ -24,7 +24,7 @@
       "eiIndexed": true,
       "date": "2025-07",
       "doi": "https://doi.org/10.1109/ICSIP65915.2025.11171457",
-      "authors": ["Hasan Mohammad Mehedi", "Naigong Yu", "Imran Khan Mirani", "Md Mizanur Rahman Mustakim"],
+      "authors": ["Mohammad Mehedi Hasan", "Naigong Yu", "Imran Khan Mirani", "Md Mizanur Rahman Mustakim"],
       "abstract": {
         "en": "Accurate segmentation of wafer map defects is essential for ensuring the quality and reliability of semiconductor manufacturing. However, it is challenged by the complex nature of defect patterns and the scarcity of labeled data. This paper introduces a novel semi-supervised method for wafer map defect segmentation that leverages feature-scale attentive pseudolabeling. Our approach incorporates a cross-attention mechanism across multiple feature scales to enhance the quality of pseudolabels, thereby improving segmentation accuracy. By refining features at different scales, our method minimizes misclassification and accurately identifies diverse defect patterns. Experiments on the MixedWM38 dataset show our method substantially surpasses state-of-the-art techniques, achieving approximately 12 % higher mIoU and 10 % higher F1-score. Additionally, we evaluate our method on the Pascal VOC 2012 dataset to validate its generalization capability, achieving improvements of 5.6 % in mIoU and 3.2 % in Dice score. These results highlight the potential of our approach to significantly improve the precision and reliability of wafer map defect segmentation in semiconductor fabrication.",
         "zh": "晶圆图缺陷的精确分割对于保障半导体制造的质量与可靠性至关重要。然而，缺陷图案的复杂性以及标注数据的稀缺性为此带来了挑战。本文提出一种新颖的用于晶圆图缺陷分割的半监督方法，该方法利用特征尺度注意力伪标签技术。我们的方法通过在多个特征尺度间引入交叉注意力机制来提升伪标签的质量，从而有效提高分割精度。借助对不同尺度特征的细化，该方法能够减少误分类并准确识别多样的缺陷形态。在MixedWM38数据集上的实验表明，我们的方法显著超越了现有最佳技术，平均交并比(mIoU)提升约12%，F1分数提升约10%。此外，为验证其泛化能力，我们在Pascal VOC 2012数据集上进行了评估，取得了mIoU提升5.6%、Dice分数提升3.2%的改进。这些结果凸显了我们的方法在提升半导体制造中晶圆图缺陷分割的精度与可靠性方面的巨大潜力。"
@@ -39,7 +39,7 @@
       "eiIndexed": true,
       "date": "2025-09",
       "doi": "",
-      "authors": ["Hasan Mohammad Mehedi", "Naigong Yu", "Imran Khan Mirani"],
+      "authors": ["Mohammad Mehedi Hasan", "Naigong Yu", "Imran Khan Mirani"],
       "abstract": {
         "en": "In semiconductor manufacturing, effectively retrieving wafer map defect patterns is essential for streamlining production and improving yield. However, the sheer volume and variability of defect data and the continuous emergence of novel categories render manual analysis infeasible, necessitating automated solutions for scalable defect retrieval. This paper proposes a zero-shot wafer-map retrieval framework that learns multi-scale representations by fusing aggregated attention maps and embeddings from a dual-branch Vision Transformer, enabling spatially guided focus on salient defect regions. In addition, integrating a composite loss function that combines curriculum learning with proxy-based metric learning significantly strengthens the model's adaptability to new and evolving defect types, enabling consistent retrieval of previously unseen defect patterns. Experimental results on the WM-811K and MixedWM38 datasets highlight the effectiveness of our approach, with Recall@1 scores of 0.921 and 0.782, Recall@8 scores of 0.985 and 0.961, and NMI values of 0.452 and 0.648, respectively, consistently surpassing previous state-of-the-art (SOTA) techniques in both retrieval accuracy and clustering quality.",
         "zh": "在半导体制造中，有效检索晶圆图缺陷图案对于优化生产流程与提升良率至关重要。然而，缺陷数据的海量性、多样性以及新缺陷类别的持续涌现，使得人工分析难以实现，亟需自动化的解决方案以实现可扩展的缺陷检索。本文提出一种零样本晶圆图检索框架，通过融合来自双分支视觉变换器的聚合注意力图与嵌入表示，学习多尺度特征表示，从而实现对显著缺陷区域的空间引导聚焦。此外，结合课程学习与基于代理的度量学习的复合损失函数，显著增强了模型对新出现及演变的缺陷类型的适应能力，使其能够稳定检索前所未见的缺陷图案。在WM-811K与MixedWM38数据集上的实验结果表明，该方法具有显著优势，其Recall@1分数分别达到0.921和0.782，Recall@8分数分别为0.985和0.961，NMI值分别为0.452和0.648，在检索精度与聚类质量两方面均持续超越先前的最先进技术。"
@@ -58,6 +58,66 @@
       "abstract": {
         "en": "With the application and popularization of depth cameras, image fusion techniques based on infrared and visible light are increasingly used in various fields. Object detection and robot navigation impose more stringent requirements on the texture details and image quality of fused images. Existing residual network, attention mechanisms, and generative adversarial network are ineffective in dealing with the image fusion problem because of insufficient detail feature extraction and non-conformity to the human visual perception system during the fusion of infrared and visible light images. Our newly developed RGFusion network relies on a two-channel attentional mechanism, a residual network, and a generative adversarial network that introduces two new components: a high-precision image feature extractor and an efficient multi-stage training strategy. The network is preprocessed by a high-dimensional mapping and the complex feature extractor is processed through a sophisticated two-stage image fusion process to obtain feature structures with multiple features, resulting in high-quality fused images rich in detailed features. Extensive experiments on public datasets validate this fusion approach, and RGFusion is at the forefront of SD metrics for EN and SF, reaching 7.366, 13.322, and 49.281 on the TNO dataset and 7.276, 19.171, and 53.777 on the RoadScene dataset, respectively.",
         "zh": "随着深度相机的应用与普及，基于红外与可见光的图像融合技术日益广泛地应用于各领域。目标检测与机器人导航对融合图像的纹理细节与图像质量提出了更高要求。现有残差网络、注意力机制与生成对抗网络在红外与可见光图像融合中存在细节特征提取不足、融合结果不符合人类视觉感知系统等问题，难以有效处理图像融合任务。我们提出的RGFusion网络基于双通道注意力机制、残差网络与生成对抗网络构建，并引入了两个新模块：高精度图像特征提取器与高效的多阶段训练策略。该网络通过高维映射进行预处理，并借助精细的两阶段图像融合流程处理复杂特征提取器，从而获得具有多重特征的特征结构，最终生成富含细节特征的高质量融合图像。在公开数据集上的大量实验验证了该融合方法的有效性，RGFusion在SD、EN、SF等指标上均处于领先水平，在TNO数据集上分别达到7.366、13.322、49.281，在RoadScene数据集上分别达到7.276、19.171、53.777。"
+      }
+    },
+    {
+      "id": "pub-005",
+      "type": "journal",
+      "title": "Evolutionary computation-based reliability quantification and its application in big data analysis on semiconductor manufacturing",
+      "journal": "Applied Soft Computing",
+      "impactFactor": "6.6",
+      "sciQuartile": "Q1",
+      "date": "2023-2",
+      "doi": "https://doi.org/10.1016/j.asoc.2023.110080",
+      "authors": ["Qiao Xu", "Naigong Yu", "Mohammad Mehedi Hasan"],
+      "abstract": {
+        "en": "Big data analysis of wafer maps in semiconductor manufacturing is essential for process reliability assessment, it is an important means of fault diagnosis in manufacturing. Although many excellent wafer map defect pattern identification (WMDPI) methods have been proposed, such as deep convolutional neural network (DCNN) based methods, there is no method that can make completely correct decisions and avoid false detections. Decision reliability is critical to the training evolution process of DCNN. In this paper, we propose a reliability quantification algorithm for wafer big data analysis. We estimate the parameter evolution uncertainty of DCNN in the WMDPI process by mixed uncertainty and thus quantify the decision reliability. In particular, reliability assessment is achieved by quantifying hybrid uncertainties, including epistemic uncertainty and aleatoric uncertainty. For epistemic uncertainty, this paper uses Monte Carlo dropout and explores the effects of drop rate, action location, and uncertainty criteria on reliability quantification through an empirical study. For aleatoric uncertainty, this paper proposes a calculation method based on Monte Carlo augmentation. The experimental results show that the identification accuracy of unknown defect patterns is 97.04% when hybrid uncertainty is considered; the identification accuracy of known defect patterns can be improved by up to 7.89%. The proposed DCNN can effectively avoid false and missed detections in the process of wafer big data analysis.",
+        "zh": "半导体制造中的晶圆图大数据分析对于工艺可靠性评估至关重要，是制造过程中故障诊断的重要手段。尽管目前已提出许多优秀的晶圆图缺陷模式识别（WMDPI）方法，例如基于深度卷积神经网络（DCNN）的方法，但尚无任何方法能完全避免误判或错误检测。决策可靠性对于DCNN的训练演化过程具有关键意义。本文提出一种面向晶圆大数据分析的可靠性量化算法，通过混合不确定性估计DCNN在WMDPI过程中的参数演化不确定性，从而量化决策可靠性。具体而言，可靠性评估通过量化混合不确定性实现，包括认知不确定性和偶然不确定性。针对认知不确定性，本文采用蒙特卡洛弃权法，并通过实证研究探讨了弃权率、作用位置以及不确定性准则对可靠性量化的影响。针对偶然不确定性，本文提出一种基于蒙特卡洛增强的计算方法。实验结果表明：考虑混合不确定性时，未知缺陷模式的识别准确率达97.04%；已知缺陷模式的识别准确率最高可提升7.89%。所提出的DCNN能有效避免晶圆大数据分析过程中的误检与漏检。"
+      }
+    },
+    {
+      "id": "pub-006",
+      "type": "journal",
+      "title": "Wafer map defect patterns classification based on a lightweight network and data augmentation",
+      "journal": "CAAI Transactions on Intelligence Technology",
+      "impactFactor": "7.3",
+      "sciQuartile": "Q1",
+      "date": "2022-7",
+      "doi": "https://doi.org/10.1049/cit2.12126",
+      "authors": ["Naigong Yu", "Huaisheng Chen", "Qiao Xu", "Mohammad Mehedi Hasan", "Ouattara Sie"],
+      "abstract": {
+        "en": "Accurately identifying defect patterns in wafer maps can help engineers find abnormal failure factors in production lines. During the wafer testing stage, deep learning methods are widely used in wafer defect detection due to their powerful feature extraction capabilities. However, most of the current wafer defect patterns classification models have high complexity and slow detection speed, which are difficult to apply in the actual wafer production process. In addition, there is a data imbalance in the wafer dataset that seriously affects the training results of the model. To reduce the complexity of the deep model without affecting the wafer feature expression, this paper adjusts the structure of the dense block in the PeleeNet network and proposes a lightweight network WM-PeleeNet based on the PeleeNet module. In addition, to reduce the impact of data imbalance on model training, this paper proposes a wafer data augmentation method based on a convolutional autoencoder by adding random Gaussian noise to the hidden layer. The method proposed in this paper has an average accuracy of 95.4% on the WM-811K wafer dataset with only 173.643 KB of the parameters and 316.194 M of FLOPs, and takes only 22.99 s to detect 1000 wafer pictures. Compared with the original PeleeNet network without optimization, the number of parameters and FLOPs are reduced by 92.68% and 58.85%, respectively. Data augmentation on the minority class wafer map improves the average classification accuracy by 1.8% on the WM-811K dataset. At the same time, the recognition accuracy of minority classes such as Scratch pattern and Donut pattern are significantly improved.",
+        "zh": "精准识别晶圆图缺陷模式有助于工程师定位生产线中的异常故障因素。在晶圆测试阶段，深度学习方法凭借其强大的特征提取能力被广泛应用于晶圆缺陷检测。然而，当前大多数晶圆缺陷模式分类模型存在复杂度高、检测速度慢的问题，难以应用于实际晶圆生产过程。此外，晶圆数据集存在的数据不平衡问题会严重影响模型训练效果。为在不影响晶圆特征表达的前提下降低深度模型复杂度，本文通过调整PeleeNet网络中密集块结构，提出一种基于PeleeNet模块的轻量化网络WM-PeleeNet。同时，为减轻数据不平衡对模型训练的影响，本文提出基于卷积自编码器的晶圆数据增强方法，通过在隐藏层添加随机高斯噪声实现数据扩充。本文方法在WM-811K晶圆数据集上的平均准确率达到95.4%，参数量仅173.643 KB，计算量仅为316.194 M FLOPs，检测1000张晶圆图仅需22.99秒。相较于未优化的原始PeleeNet网络，其参数量与计算量分别降低92.68%与58.85%。通过对少数类晶圆图进行数据增强，WM-811K数据集上的平均分类准确率提升1.8%，且Scratch（划痕）与Donut（环形）等少数类缺陷模式的识别准确率得到显著提高。"
+      }
+    },
+    {
+      "id": "pub-007",
+      "type": "conference",
+      "title": "Wafer map defect recognition with few shot learning based on hybrid self-attention mechanism and prototype network",
+      "conference": "2021 China Automation Congress (CAC)",
+      "location": "Beijing, China",
+      "eiIndexed": true,
+      "date": "2021-10",
+      "doi": "https://doi.org/10.1109/CAC53003.2021.9727346",
+      "authors": ["Naigong Yu", "Huaisheng Chen", "Qiao Xu", "Mohammad Mehedi Hasan"],
+      "abstract": {
+        "en": "Semiconductor manufacturing is a very complex dynamic manufacturing process. Wafer manufacturing is the most critical part of it. Abnormalities in any process in wafer production may cause wafer defects. Accurately identifying various defect patterns on the wafer surface can help find and adjust abnormal factors in the online manufacturing process and improve the yield of integrated circuit production. Aiming at the very small number of wafer defect patterns that appear in the wafer manufacturing process, this paper proposes a small sample wafer defect pattern classification method based on a hybrid self-attention mechanism and a prototype network. This method introduces a hybrid self-attention module into the feature embedding network that helps to automatically learn the global dependence of channels and positions in the wafer map to obtain more discriminative features. The metric classifier is used for classification to realize the pattern recognition of wafer defects in small samples. A large number of experiments were conducted on the WM-811K data set and the MixedWM38 data set. The recognition accuracy of this method in the 3-way 1-shot, 3-way 5-shot, 5-way 1-shot and 5-way 5-shot tasks achieved average classification accuracy rates of 89.99%, 94.96%, 85.77%, and 92.32%, respectively. The experimental results show that compared with the traditional deep learning method, the method in this paper can learn new defect pattern features and realize automatic classification only through a small number of wafer samples.",
+        "zh": "半导体制造是一个极其复杂的动态制造过程，晶圆制造是其最关键的环节。晶圆生产中的任何工序异常都可能导致晶圆缺陷。准确识别晶圆表面的各类缺陷模式，有助于发现并调整在线制造过程中的异常因素，从而提高集成电路生产的良率。针对晶圆制造过程中出现数量极少的晶圆缺陷模式，本文提出一种基于混合自注意力机制与原型网络的小样本晶圆缺陷模式分类方法。该方法在特征嵌入网络中引入混合自注意力模块，以自动学习晶圆图中通道与位置的全局依赖关系，从而获取更具判别性的特征，并采用度量分类器进行分类，实现小样本条件下的晶圆缺陷模式识别。在WM-811K数据集与MixedWM38数据集上进行了大量实验，该方法在3-way 1-shot、3-way 5-shot、5-way 1-shot与5-way 5-shot任务中的识别准确率分别达到平均分类准确率89.99%、94.96%、85.77%与92.32%。实验结果表明，相较于传统深度学习方法，本文方法仅需少量晶圆样本即可学习新的缺陷模式特征并实现自动分类。"
+      }
+    },
+    {
+      "id": "pub-008",
+      "type": "conference",
+      "title": "Wafer Map Defect Pattern Recognition Based on Self-Organizing Incremental Neural Network",
+      "conference": "2021 China Automation Congress (CAC)",
+      "location": "Beijing, China",
+      "eiIndexed": true,
+      "date": "2021-10",
+      "doi": "https://doi.org/10.1109/CAC53003.2021.9728184",
+      "authors": ["Naigong Yu", "Huaisheng Chen", "Qiao Xu", "Mohammad Mehedi Hasan", "Kai Jiang"],
+      "abstract": {
+        "en": "Wafer map defect pattern (WMDP) recognition is critical to evaluate the semiconductor manufacturing process. Traditional WMDP recognition algorithms, such as deep learning-based methods, only focus on improving the accuracies of the seen patterns in the training set but ignore the recognition and incremental generalization of new emerging patterns. The model can only be retrained by using the overall dataset composed of new and old patterns to gain the ability to recognize the new patterns. To address the above problems, this paper proposes a WMDP recognition method based on self-organizing incremental neural network. The proposed method detects abnormal patterns according to the relationship between input response and adaptive threshold of winner neurons, updates the model only with new pattern samples by dynamically adjusting the number or connection of neurons. Experiments show that the proposed method has the ability to classify known patterns and discover unknown abnormal patterns. Its unique competitive learning mechanism makes it possible to update the model only with new pattern samples without catastrophic forgetting.",
+        "zh": "晶圆图缺陷模式识别对于评估半导体制造工艺至关重要。传统的晶圆图缺陷模式识别算法（例如基于深度学习的方法）仅关注提升训练集中已知模式的识别准确率，却忽视了对新出现模式的识别与增量泛化能力。此类模型通常只能通过使用包含新旧模式的整体数据集进行重新训练，才能获得识别新模式的能力。为解决上述问题，本文提出一种基于自组织增量神经网络的晶圆图缺陷模式识别方法。该方法根据获胜神经元的输入响应与自适应阈值之间的关系来检测异常模式，并通过动态调整神经元数量或连接方式，仅使用新模式的样本即可完成模型更新。实验表明，所提方法能够有效分类已知模式并发现未知的异常模式。其独特的竞争学习机制使得仅用新模式的样本更新模型而避免灾难性遗忘成为可能。"
       }
     }
   ],
