@@ -184,6 +184,7 @@
   .hero-section {
     padding: 40px 0;
     min-height: auto;
+    height: auto;
   }
 
   .hero-name {
@@ -203,6 +204,11 @@
     height: 250px;
   }
 
+  .profile-card .card-img-top {
+    width: 160px;
+    height: 160px;
+  }
+
   .bio-content {
     text-align: center;
   }
@@ -219,6 +225,7 @@
 @media (max-width: 576px) {
   .hero-section {
     padding: 30px 0;
+    height: auto;
   }
 
   .hero-name {
@@ -237,6 +244,11 @@
   .hero-image {
     width: 200px;
     height: 200px;
+  }
+
+  .profile-card .card-img-top {
+    width: 140px;
+    height: 140px;
   }
 
   .cta-buttons {

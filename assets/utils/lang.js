@@ -4,6 +4,7 @@ class LanguageManager {
     this.currentLang = this.getStoredLanguage() || 'en';
     this.translations = {};
     this.publicationsData = null;
+    this.projectsData = null;
     this.init();
   }
 
@@ -14,6 +15,7 @@ class LanguageManager {
       this.translations = await response.json();
       this.loadNavbar();
       this.loadHero();
+      this.loadProjects();
       this.loadPublications();
       this.updatePageContent();
     } catch (error) {
@@ -33,8 +35,89 @@ class LanguageManager {
       localStorage.setItem('language', lang);
       this.loadNavbar();
       this.loadHero();
+      this.loadProjects();
       this.loadPublications();
       this.updatePageContent();
+    }
+  }
+
+  // Load projects from JSON file
+  async loadProjects() {
+    const projectsContainer = document.getElementById('projects-list');
+    const projectsTitle = document.getElementById('projects-title');
+    if (!projectsContainer) return;
+
+    try {
+      if (!this.projectsData) {
+        const response = await fetch('assets/utils/projects.json');
+        this.projectsData = await response.json();
+      }
+
+      const { projects, labels } = this.projectsData;
+      const lang = this.currentLang;
+      const l = labels[lang];
+
+      if (projectsTitle) {
+        projectsTitle.textContent = l.sectionTitle;
+      }
+
+      let html = '';
+      projects.forEach(project => {
+        const title = project.title?.[lang] || project.title?.en || '';
+        const description = project.description?.[lang] || project.description?.en || '';
+        const role = project.role?.[lang] || project.role?.en || '';
+        const highlights = project.highlights?.[lang] || project.highlights?.en || [];
+        const techStack = project.techStack || [];
+
+        const links = project.links || {};
+        const linkButtons = [
+          links.demo ? `<a class="btn btn-sm btn-primary" href="${links.demo}" target="_blank"><i class="fas fa-external-link-alt"></i> ${l.demo}</a>` : '',
+          links.repo ? `<a class="btn btn-sm btn-outline-dark" href="${links.repo}" target="_blank"><i class="fab fa-github"></i> ${l.repo}</a>` : '',
+          links.paper ? `<a class="btn btn-sm btn-outline-secondary" href="${links.paper}" target="_blank"><i class="fas fa-file-alt"></i> ${l.paper}</a>` : ''
+        ].filter(Boolean).join('');
+
+        const highlightList = highlights.length
+          ? `<div class="mt-2">
+              <div class="fw-semibold mb-1">${l.highlights}</div>
+              <ul class="project-highlight">
+                ${highlights.map(item => `<li>${item}</li>`).join('')}
+              </ul>
+            </div>`
+          : '';
+
+        html += `
+          <div class="col-lg-6 col-12">
+            <div class="card project-card">
+              <div class="card-body">
+                <h3 class="project-title">${title}</h3>
+
+                <div class="project-meta">
+                  ${role ? `<span class="meta-item"><i class="fas fa-user"></i> ${l.role}: ${role}</span>` : ''}
+                  ${project.period ? `<span class="meta-item"><i class="fas fa-calendar-alt"></i> ${l.period}: ${project.period}</span>` : ''}
+                </div>
+
+                <p class="project-desc">${description}</p>
+
+                ${techStack.length ? `
+                  <div class="fw-semibold mb-2">${l.tech}</div>
+                  <div class="project-tags">
+                    ${techStack.map(tech => `<span class="project-tag">${tech}</span>`).join('')}
+                  </div>
+                ` : ''}
+
+                ${highlightList}
+
+                ${linkButtons ? `<div class="project-links mt-3">${linkButtons}</div>` : ''}
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      projectsContainer.innerHTML = html;
+    } catch (error) {
+      console.error('Error loading projects:', error);
+      projectsContainer.innerHTML = '<div class="col-12"><p class="text-center text-muted">Failed to load projects.</p></div>';
     }
   }
 

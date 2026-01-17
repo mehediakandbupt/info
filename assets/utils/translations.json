@@ -1,7 +1,7 @@
 {
   "en": {
     "navbar": {
-      "brand": "HASAN MOHAMMAD MEHEDI",
+      "brand": "MOHAMMAD MEHEDI HASAN",
       "home": "Home",
       "about": "About",
       "projects": "Projects",
@@ -9,7 +9,7 @@
       "contact": "Contact"
     },
     "hero": {
-      "name": "Hasan Mohammad Mehedi, PhD",
+      "name": "Mohammad Mehedi Hasan, PhD",
       "title": "Full-Stack Developer & Researcher",
       "bio": "I am an AI and computer vision engineer focused on automation and building reliable solutions for industrial inspection and data driven decision making. My experience includes defect detection, segmentation, retrieval, and incremental learning, using deep learning models such as CNNs and Vision Transformers. I develop complete workflows covering data preparation, model training, evaluation, deployment, and system integration to improve quality control, efficiency, and operational stability. I also build Generative AI applications, including LLM based and multi agent workflows such as CrewAI, to automate information search, analysis, documentation, and structured reporting. I work closely with cross functional teams and aim to deliver practical systems that are scalable, accurate, and ready for real world use.",
       "viewWork": "View My Work",

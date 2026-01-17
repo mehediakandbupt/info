@@ -1,0 +1,155 @@
+{
+  "labels": {
+    "en": {
+      "sectionTitle": "Projects",
+      "role": "Role",
+      "period": "Period",
+      "tech": "Tech Stack",
+      "highlights": "Highlights",
+      "demo": "Live Demo",
+      "repo": "Source Code",
+      "paper": "Paper"
+    },
+    "zh": {
+      "sectionTitle": "项目",
+      "role": "角色",
+      "period": "周期",
+      "tech": "技术栈",
+      "highlights": "亮点",
+      "demo": "在线演示",
+      "repo": "源代码",
+      "paper": "论文"
+    }
+  },
+  "projects": [
+    {
+      "id": "proj-001",
+      "title": {
+        "en": "Unsupervised Pixel-Level Wafer Map Anomaly Detection",
+        "zh": "无监督像素级晶圆图异常检测"
+      },
+      "description": {
+        "en": "Designed a student–teacher feature pyramid distillation framework enhanced with an Efficient Dual Attention (EDA) module to refine multi-scale features and improve pixel-level localization. The model is trained only on normal wafers and flags anomalies via feature discrepancies during inference. Results: On WM-811K and MixedWM38, it achieved AUROC 99.65% / 99.35%, with strong AUPR/AUPRO and real-time feasibility (3.204 FPS reported).",
+        "zh": "设计了一种增强型师生特征金字塔蒸馏框架，融入高效双重注意力（EDA）模块，以优化多尺度特征并提升像素级定位能力。该模型仅使用正常晶圆样本进行训练，在推理阶段通过特征差异识别异常。实验结果：在WM-811K与MixedWM38数据集上，分别实现了99.65%与99.35%的AUROC值，同时具备优异的AUPR/AUPRO指标与实时可行性（报告吞吐量为3.204 FPS）。"
+      },
+      "role": {
+        "en": "PhD Researcher",
+        "zh": "博士研究员"
+      },
+      "period": "2022-2023",
+      "techStack": ["PyTorch", "Knowledge Distillation", "CNN", "Attention Network", "PyTorch Lightning", "Anomalib"],
+      "highlights": {
+        "en": [
+          "No defect-mask supervision required (train on normal wafers)",
+          "High detection and localization performance (AUROC up to 99%+)",
+          "Designed for practical deployment with efficient inference"
+        ],
+        "zh": [
+          "无需缺陷掩模监督（仅使用正常晶圆进行训练）",
+          "具备高检测与定位性能（报道的AUROC最高可达99%以上）",
+          "专为实际部署设计，推理效率高。"
+        ]
+      },
+      "links": {
+        "demo": null,
+        "repo": null
+      }
+    },
+    {
+      "id": "proj-002",
+      "title": {
+        "en": "Semi-Supervised Wafer Map Defect Segmentation",
+        "zh": "半监督晶圆图缺陷分割"
+      },
+      "description": {
+        "en": "Developed a semi-supervised segmentation pipeline for wafer-map defects where labeled masks are limited. The approach generates stronger pseudo-labels using cross-attention across multiple feature scales and stabilizes training with multi-scale consistency under weak/strong augmentations.",
+        "zh": "开发了一种用于晶圆图缺陷的半监督分割管线，适用于标注掩模有限的场景。该方法通过跨多个特征尺度的跨注意力机制生成更强的伪标签，并通过弱/强增强下的多尺度一致性来稳定训练过程。"
+      },
+      "role": {
+        "en": "PhD Researcher",
+        "zh": "博士研究员"
+      },
+      "period": "2023-2024",
+      "techStack": ["PyTorch", "CNN", "Cross-attention (multi-scale)", "Pseudo-labeling"],
+      "highlights": {
+        "en": [
+          "Reduces dependency on labeled data for segmentation.",
+          "Improves segmentation on mixed/overlapping defect patterns.",
+          "Reported gains of about +12% mIoU and +10% F1-score on MixedWM38"
+        ],
+        "zh": [
+          "减少对标注数据的依赖。",
+          "提升混合/重叠缺陷图样的分割效果。",
+          "在MixedWM38数据集上报道mIoU提升约12%，F1-score提升约10%。"
+        ]
+      },
+      "links": {
+        "paper": null
+      }
+    },
+    {
+      "id": "proj-003",
+      "title": {
+        "en": "Zero-Shot Wafer Map Defect Retrieval (Unseen Categories)",
+        "zh": "零样本晶圆图缺陷检索（未知类别）"
+      },
+      "description": {
+        "en": "Built a retrieval system that matches wafer-map defects even when the defect type was not seen during training. The model combines fine-grained and global representations using a dual-branch multi-scale ViT design, and trains with metric learning to produce strong embedding space separation for retrieval and clustering.",
+        "zh": "构建了一种检索系统，能够匹配在训练期间未见过的晶圆图缺陷类型。该模型采用双分支多尺度ViT设计，结合细粒度与全局特征表示，并通过度量学习进行训练，以实现强大的嵌入空间分离，用于检索与聚类。"
+      },
+      "role": {
+        "en": "PhD Researcher",
+        "zh": "博士研究员"
+      },
+      "period": "2023-2024",
+      "techStack": ["PyTorch", "Vision Transformers", "DINO-ViT features", "Metric learning (proxy anchor + curriculum style)"],
+      "highlights": {
+        "en": [
+          "Supports unseen defect categories through embedding-based retrieval.",
+          "Strong retrieval and clustering results reported (e.g., Recall@K and NMI improvements).",
+          "Designed for practical similarity search and defect pattern management."
+        ],
+        "zh": [
+          "支持通过嵌入式检索识别未知缺陷类别。",
+          "报道了强有力的检索与聚类结果（例如Recall@K和NMI的提升）。",
+          "专为实际的相似性搜索和缺陷图样管理设计。"
+        ]
+      },
+      "links": {
+        "repo": null
+      }
+    },
+    {
+      "id": "proj-004",
+      "title": {
+        "en": "Exemplar-Free Class-Incremental Wafer Map Defect Recognition",
+        "zh": "无示例类增量晶圆图缺陷识别"
+      },
+      "description": {
+        "en": "Designed an incremental learning framework that learns new defect classes over time without storing old samples. The method uses transformer-based feature fusion and proxy-guided distillation to reduce forgetting while keeping the model adaptable to new defect patterns.",
+        "zh": "设计了一种增量学习框架，能够随着时间学习新的缺陷类别而无需存储旧样本。该方法采用基于变换器的特征融合和代理引导的蒸馏技术，以减少遗忘，同时保持模型对新缺陷图样的适应能力。"
+      },
+      "role": {
+        "en": "PhD Researcher",
+        "zh": "博士研究员"
+      },
+      "period": "2024-2025",
+      "techStack": ["PyTorch", "Incremental Learning", "Transformer Fusion", "Knowledge Distillation"],
+      "highlights": {
+        "en": [
+          "Exemplar-free setup (no replay buffer required).",
+          "Reduces catastrophic forgetting in long training sequences.",
+          "Suitable for evolving defect taxonomies and data-retention constraints."
+        ],
+        "zh": [
+          "无示例设置（无需重放缓冲区）。",
+          "减少长训练序列中的灾难性遗忘。",
+          "适用于不断发展的缺陷分类和数据保留限制。"
+        ]
+      },
+      "links": {
+        "demo": null
+      }
+    }
+  ]
+}

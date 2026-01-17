@@ -1,0 +1,104 @@
+/* Projects Page Styling */
+.projects-section {
+  padding: 40px 0;
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.project-card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.project-card .card-body {
+  padding: 24px;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.project-meta .meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.project-tag {
+  padding: 6px 12px;
+  background-color: #f1f3f5;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-links a {
+  text-decoration: none;
+}
+
+.project-highlight {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #444;
+  font-size: 0.92rem;
+}
+
+.project-highlight li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+  .projects-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .project-card .card-body {
+    padding: 18px;
+  }
+}
