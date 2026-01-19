@@ -23,7 +23,44 @@
   },
   "projects": [
     {
-      "id": "proj-001",
+      "id": "proj-LLM001",
+      "title": {
+        "en": "Multi-Agent Operations Automation Platform (CrewAI + LLM Orchestration)",
+        "zh": "多智能体操作自动化平台（CrewAI 与大语言模型编排）"
+      },
+      "description": {
+        "en": "Built and deployed a CrewAI multi-agent system to automate industrial operations workflows by converting unstructured requests (emails, RFQs, PO/invoice checks, shipment updates, and SOP questions) into structured, action-ready outputs. Specialized agents collaborate through a controlled pipeline (plan → retrieve → validate → write → export) with guardrails for formatting, data consistency, and traceability to reduce manual coordination and standardize reporting.",
+        "zh": "构建并部署了CrewAI多智能体系统，通过将非结构化请求（如电子邮件、询价单、采购订单/发票检查、运输更新和标准操作程序问题）转换为结构化、可执行的输出，实现工业操作工作流的自动化。专门化的智能体通过受控管道（计划→检索→验证→撰写→导出）协同工作，设有格式、数据一致性和可追溯性的防护措施，以减少人工协调并规范报告流程。"
+      },
+      "role": {
+        "en": "Full-Stack AI Developer",
+        "zh": "全栈人工智能开发者"
+      },
+      "period": "2025-2026",
+      "techStack": ["Python", "CrewAI", "LLM Orchestration", "Multi-Agent Systems", "RAG", "JSON structured outputs", "Prompt Engineering","Tool calling (web search, file parsing, document/spreadsheet generation)", "Logging/monitoring","Docker"],
+      "highlights": {
+        "en": [
+          "Automated end-to-end deliverables: email drafts, SOP answers, tables, weekly summaries, KPI notes, and PO/shipment status reports.",
+          "Role-based agent handoffs (Coordinator, Analyst, Checker, Writer, Extractor) with shared memory to avoid missed steps.",
+          "Validation for key fields (SKU/PO, dates, numeric checks) and template compliance (Incoterms, MOQ, lead time, cost breakdown).",
+          "Traceable runs with execution logs for auditing and continuous improvement.",
+          "Reusable knowledge base from SOPs, quotations, specs, and templates; deployable as a lightweight service for daily use."
+        ],
+        "zh": [
+          "实现端到端交付物自动化：电子邮件草稿、SOP答案、表格、每周总结、KPI备注以及采购订单/运输状态报告。",
+          "基于角色的智能体交接（协调员、分析员、检查员、撰写员、提取员），共享记忆以避免遗漏步骤。",
+          "关键字段（SKU/采购订单、日期、数值检查）和模板合规性（国际贸易术语解释通则、最小起订量、交货时间、成本明细）的验证。",
+          "可追溯的运行日志，便于审计和持续改进。",
+          "可重用的知识库，涵盖SOP、报价单、规格和模板；可作为轻量级服务部署以供日常使用。"
+        ]
+      },
+      "links": {
+        "demo": null,
+        "repo": null
+      }
+    },
+    {
+      "id": "proj-Phd001",
       "title": {
         "en": "Unsupervised Pixel-Level Wafer Map Anomaly Detection",
         "zh": "无监督像素级晶圆图异常检测"
@@ -56,7 +93,7 @@
       }
     },
     {
-      "id": "proj-002",
+      "id": "proj-Phd002",
       "title": {
         "en": "Semi-Supervised Wafer Map Defect Segmentation",
         "zh": "半监督晶圆图缺陷分割"
@@ -88,7 +125,7 @@
       }
     },
     {
-      "id": "proj-003",
+      "id": "proj-Phd003",
       "title": {
         "en": "Zero-Shot Wafer Map Defect Retrieval (Unseen Categories)",
         "zh": "零样本晶圆图缺陷检索（未知类别）"
@@ -120,7 +157,7 @@
       }
     },
     {
-      "id": "proj-004",
+      "id": "proj-Phd004",
       "title": {
         "en": "Exemplar-Free Class-Incremental Wafer Map Defect Recognition",
         "zh": "无示例类增量晶圆图缺陷识别"
@@ -149,6 +186,146 @@
       },
       "links": {
         "demo": null
+      }
+    },
+    {
+      "id": "proj-Master001",
+      "title": {
+        "en": "Sketch-to-Cartoon Costume Generation for Scratch 3.0 (cGAN + Dense-CartoonGAN)",
+        "zh": "草图到卡通服装生成（条件GAN + Dense-CartoonGAN）"
+      },
+      "description": {
+        "en": "Built a web-based extension for Scratch 3.0 that lets users turn a hand-drawn sketch into a high-quality cartoon “costume” for sprites. To enable sketch-to-image creation inside Scratch, I split the system into three modules: (1) sketch-to-image translation, (2) neural cartoon style transfer, and (3) end-to-end integration with Scratch 3.0. I proposed a conditional GAN with a modified MultiResU-Net generator to reduce artifacts while cutting parameters and training time. For cartoonization, I developed Dense-CartoonGAN, replacing residual blocks with dense blocks to improve feature reuse, strengthen gradient flow, and reduce computation. The final system delivers interactive, clearer outputs with less blur and distortion, making sprite costume creation faster and more user-friendly for students.",
+        "zh": "为Scratch 3.0构建了一个基于Web的扩展，允许用户将手绘草图转换为高质量的卡通“服装”以供精灵使用。为了在Scratch中实现草图到图像的创建，我将系统分为三个模块：（1）草图到图像的转换，（2）神经卡通风格迁移，以及（3）与Scratch 3.0的端到端集成。我提出了一种条件GAN，采用修改后的MultiResU-Net生成器，以减少伪影，同时降低参数量和训练时间。对于卡通化，我开发了Dense-CartoonGAN，用密集块替换残差块，以提高特征重用、增强梯度流动并减少计算量。最终系统提供了交互式、更清晰的输出，减少了模糊和失真，使精灵服装的创建更快、更易于学生使用。"
+      },
+      "role": {
+        "en": "Master’s Thesis Researcher & Developer",
+        "zh": "硕士论文研究员与开发者"
+      },
+      "period": "2019-2020",
+      "techStack": ["Scratch 3.0 integration", "Web application", "Python", "cGAN", "MultiResU-Net (modified)", "Image-to-Image Translation", "Neural Style Transfer"],
+      "highlights": {
+        "en": [
+          "Enabled sketch → image → cartoon generation as a new workflow for Scratch 3.0 costume design.",
+          "Proposed a MultiResU-Net–based cGAN generator to reduce artifacts with fewer parameters and shorter training.",
+          "Developed Dense-CartoonGAN (dense blocks in the generator) for better cartoon quality with lower compute.",
+          "Delivered an integrated tool that improves user experience for students creating Scratch sprites."
+        ],
+        "zh": [
+          "实现了草图→图像→卡通生成的新工作流，用于Scratch 3.0服装设计。",
+          "提出了一种基于MultiResU-Net的条件GAN生成器，以更少的参数和更短的训练时间减少伪影。",
+          "开发了Dense-CartoonGAN（生成器中的密集块），以更低的计算量实现更好的卡通质量。",
+          "交付了一个集成工具，提升了学生创建Scratch精灵的用户体验。"
+        ]
+      },
+      "links": {
+        "demo": null,
+        "repo": null
+      }
+    },
+    {
+      "id": "proj-Master002",
+      "title": {
+        "en": "Personalized Movie Recommendation Engine",
+        "zh": "个性化电影推荐引擎"
+      },
+      "description": {
+        "en": "Built a personalized movie recommendation system that suggests relevant movies for each user by combining collaborative filtering (learning from user–item interaction patterns) and content-based filtering (using movie metadata such as genres, tags, and descriptions). The pipeline covers data cleaning, feature engineering, model training, offline evaluation, and an inference layer that returns Top-K recommendations with fallback strategies for cold-start users and new movies.",
+        "zh": "构建了一个个性化电影推荐系统，通过结合协同过滤（从用户-项目交互模式中学习）和基于内容的过滤（利用电影元数据，如类型、标签和描述）来为每个用户推荐相关电影。该管线涵盖数据清洗、特征工程、模型训练、离线评估以及一个推理层，能够返回Top-K推荐，并为冷启动用户和新电影提供备用策略。"
+      },
+      "role": {
+        "en": "Project Lead (Master’s Team Project)",
+        "zh": "项目负责人（硕士团队项目）"
+      },
+      "period": "2018-2019",
+      "techStack": ["Python", "PyTorch", "Scikit-learn"],
+      "highlights": {
+        "en": [
+          "Merged collaborative signals with content similarity to improve personalization and coverage.",
+          "Used content-based features for new items/users and blended scores when interaction history is limited.",
+          "Precomputed embeddings/similarity matrices for fast Top-K inference.",
+          "Measured performance with ranking metrics and compared single-method baselines against the hybrid approach."
+        ],
+        "zh": [
+          "融合协同信号与内容相似性以提升个性化和覆盖率。",
+          "对于新项目/用户，使用基于内容的特征，并在交互历史有限时混合评分。",
+          "预计算嵌入/相似矩阵以实现快速Top-K推理。",
+          "使用排名指标衡量性能，并将单一方法基线与混合方法进行比较。"
+        ]
+      },
+      "links": {
+        "demo": null,
+        "repo": null
+      }
+    },
+    {
+      "id": "proj-Master003",
+      "title": {
+        "en": "Smart Street Lighting & Predictive Maintenance (Edge + NB-IoT)",
+        "zh": "智能街道照明与预测性维护（边缘计算 + NB-IoT）"
+      },
+      "description": {
+        "en": "Designed a street-lighting system that reduces energy use and maintenance cost by combining adaptive dimming with predictive maintenance. Nodes collect ambient/motion signals and power metrics (voltage/current/power). Edge logic controls real-time brightness, while NB-IoT uploads telemetry for detecting abnormal power patterns (lamp aging, driver faults) and generating prioritized maintenance actions via a monitoring dashboard.",
+        "zh": "设计了一种街道照明系统，通过结合自适应调光与预测性维护来降低能源消耗和维护成本。节点收集环境/运动信号和电力指标（电压/电流/功率）。边缘逻辑控制实时亮度，而NB-IoT上传遥测数据以检测异常电力模式（灯具老化、驱动器故障）并通过监控仪表板生成优先维护操作。"
+      },
+      "role": {
+        "en": "Project Lead (Master’s Team Project)",
+        "zh": "项目负责人（硕士团队项目）"
+      },
+      "period": "2018-2019",
+      "techStack": ["C++","WSN", "NB-IoT", "Sensors (motion)"],
+      "highlights": {
+        "en": [
+          "Adaptive dimming for energy saving + proactive maintenance to reduce site visits.",
+          "Early fault signals from power trend monitoring (aging, driver instability, abnormal loads).",
+          "Edge-first control for reliability under unstable connectivity.",
+          "Fleet dashboard with alerts, device health, and maintenance task prioritization."
+        ],
+        "zh": [
+          "自适应调光以节能 + 主动维护以减少现场访问。",
+          "通过电力趋势监测（老化、驱动器不稳定、异常负载）获取早期故障信号。",
+          "边缘优先控制以确保在连接不稳定时的可靠性。",
+          "车队仪表板，提供警报、设备健康状况和维护任务优先级。"
+        ]
+      },
+      "links": {
+        "demo": null,
+        "repo": null
+      }
+    },
+    {
+      "id": "proj-Bs001",
+      "title": {
+        "en": "E-Commerce Web Application (JSP/Servlet + MySQL)",
+        "zh": "电子商务网页应用（JSP/Servlet + MySQL）"
+      },
+      "description": {
+        "en": "Developed a Java-based e-commerce web application using JSP/Servlet and MySQL, delivering a complete shopping flow from user registration to checkout. The system supports secure login/session handling, product catalog management, shopping cart operations, and order checkout. Emphasis was placed on clean module separation, reliable database transactions, and a user-friendly interface for a practical end-to-end online shopping experience.",
+        "zh": "使用JSP/Servlet和MySQL开发了一个基于Java的电子商务网页应用，提供从用户注册到结账的完整购物流程。该系统支持安全登录/会话处理、产品目录管理、购物车操作和订单结账。重点放在模块清晰分离、可靠的数据库事务处理以及用户友好的界面设计上，以实现实用的端到端在线购物体验。"
+      },
+      "role": {
+        "en": "Team Lead & Full-Stack Developer (B.S. Thesis Project)",
+        "zh": "团队负责人与全栈开发者（学士论文项目）"
+      },
+      "period": "2015",
+      "techStack": ["Java", "JSP/Servlet", "MySQL", "HTML/CSS/JavaScript", "MVC Architecture"],
+      "highlights": {
+        "en": [
+          "Built core modules: authentication, product management, cart, checkout, and order history.",
+          "Designed relational database schema (users, products, cart, orders) with efficient CRUD operations.",
+          "Implemented input validation and basic security controls (sessions, access control).",
+          "Structured code for maintainability and easy extension (admin panel, payment, shipping)."
+        ],
+        "zh": [
+          "构建核心模块：身份验证、产品管理、购物车、结账和订单历史。",
+          "设计关系型数据库模式（用户、产品、购物车、订单），实现高效的CRUD操作。",
+          "实施输入验证和基本安全控制（会话、访问控制）。",
+          "结构化代码以便于维护和扩展（管理面板、支付、运输）。"
+        ]
+      },
+      "links": {
+        "demo": null,
+        "repo": null
       }
     }
   ]

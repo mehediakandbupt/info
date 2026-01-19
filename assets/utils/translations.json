@@ -51,7 +51,7 @@
   },
   "zh": {
     "navbar": {
-      "brand": "Hasan Mohammad Mehedi",
+      "brand": "MOHAMMAD MEHEDI HASAN",
       "home": "主页",
       "about": "关于",
       "projects": "项目",
@@ -59,7 +59,7 @@
       "contact": "联系"
     },
     "hero": {
-      "name": "Hasan Mohammad Mehedi",
+      "name": "Mohammad Mehedi Hasan, PhD",
       "title": "全栈开发者 & 研究员",
       "bio": "我是一名人工智能与计算机视觉工程师，专注于自动化以及面向工业检测与数据驱动决策的可靠解决方案开发。我的研究与实践涵盖缺陷检测、缺陷分割、相似检索与增量学习，并应用卷积神经网络（CNN）与视觉Transformer（ViT）等深度学习模型。具备从数据准备、模型训练与评估到部署落地与系统集成的全流程开发经验，致力于提升质量管控、生产效率与系统稳定性。同时，我也开展生成式人工智能应用开发，包括基于大语言模型（LLM）的多智能体协同工作流（如 CrewAI），用于自动化信息检索、分析、文档整理与结构化报告生成。我擅长跨团队协作，目标是交付可扩展、高精度、可工程化落地的实际系统。",
       "viewWork": "查看我的作品",
