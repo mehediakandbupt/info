@@ -1,0 +1,90 @@
+/* Qualifications Timeline */
+.education-timeline {
+  position: relative;
+  padding-left: 28px;
+  margin: 0;
+}
+
+.education-timeline::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e3e6ea;
+  display: none;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0d6efd;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #e3e6ea;
+  display: none;
+}
+
+.timeline-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(233, 236, 239, 0.6);
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.timeline-card h5 {
+  margin-bottom: 6px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.timeline-meta {
+  color: #6c757d;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Tabs font color only */
+#qualifications-tabs .nav-link {
+  color: #6c757d;
+}
+
+#qualifications-tabs .nav-link.active {
+  color: #343a40;
+}
+
+@media (max-width: 576px) {
+  .education-timeline {
+    padding-left: 22px;
+  }
+
+  .timeline-dot {
+    width: 14px;
+    height: 14px;
+    top: 16px;
+  }
+
+  .timeline-card {
+    padding: 14px 16px;
+  }
+}

@@ -21,9 +21,47 @@
       "paper": "论文"
     }
   },
+  "filters": [
+    {
+      "id": "all",
+      "label": {
+        "en": "All",
+        "zh": "全部"
+      }
+    },
+    {
+      "id": "industry",
+      "label": {
+        "en": "LLM/AI Agent",
+        "zh": "大模型/智能体"
+      }
+    },
+    {
+      "id": "phd",
+      "label": {
+        "en": "PhD Projects",
+        "zh": "博士项目"
+      }
+    },
+    {
+      "id": "master",
+      "label": {
+        "en": "Master Projects",
+        "zh": "硕士项目"
+      }
+    },
+    {
+      "id": "bachelor",
+      "label": {
+        "en": "Bachelor Projects",
+        "zh": "本科项目"
+      }
+    }
+  ],
   "projects": [
     {
       "id": "proj-LLM001",
+      "category": "industry",
       "title": {
         "en": "Multi-Agent Operations Automation Platform (CrewAI + LLM Orchestration)",
         "zh": "多智能体操作自动化平台（CrewAI 与大语言模型编排）"
@@ -61,6 +99,7 @@
     },
     {
       "id": "proj-Phd001",
+      "category": "phd",
       "title": {
         "en": "Unsupervised Pixel-Level Wafer Map Anomaly Detection",
         "zh": "无监督像素级晶圆图异常检测"
@@ -94,6 +133,7 @@
     },
     {
       "id": "proj-Phd002",
+      "category": "phd",
       "title": {
         "en": "Semi-Supervised Wafer Map Defect Segmentation",
         "zh": "半监督晶圆图缺陷分割"
@@ -126,6 +166,7 @@
     },
     {
       "id": "proj-Phd003",
+      "category": "phd",
       "title": {
         "en": "Zero-Shot Wafer Map Defect Retrieval (Unseen Categories)",
         "zh": "零样本晶圆图缺陷检索（未知类别）"
@@ -158,6 +199,7 @@
     },
     {
       "id": "proj-Phd004",
+      "category": "phd",
       "title": {
         "en": "Exemplar-Free Class-Incremental Wafer Map Defect Recognition",
         "zh": "无示例类增量晶圆图缺陷识别"
@@ -190,6 +232,7 @@
     },
     {
       "id": "proj-Master001",
+      "category": "master",
       "title": {
         "en": "Sketch-to-Cartoon Costume Generation for Scratch 3.0 (cGAN + Dense-CartoonGAN)",
         "zh": "草图到卡通服装生成（条件GAN + Dense-CartoonGAN）"
@@ -225,6 +268,7 @@
     },
     {
       "id": "proj-Master002",
+      "category": "master",
       "title": {
         "en": "Personalized Movie Recommendation Engine",
         "zh": "个性化电影推荐引擎"
@@ -260,6 +304,7 @@
     },
     {
       "id": "proj-Master003",
+      "category": "master",
       "title": {
         "en": "Smart Street Lighting & Predictive Maintenance (Edge + NB-IoT)",
         "zh": "智能街道照明与预测性维护（边缘计算 + NB-IoT）"
@@ -295,6 +340,7 @@
     },
     {
       "id": "proj-Bs001",
+      "category": "bachelor",
       "title": {
         "en": "E-Commerce Web Application (JSP/Servlet + MySQL)",
         "zh": "电子商务网页应用（JSP/Servlet + MySQL）"

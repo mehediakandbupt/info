@@ -46,6 +46,15 @@
         const item = header.closest('.publication-item');
         const body = item.querySelector('.publication-body');
         const isExpanded = item.classList.contains('expanded');
+
+        // Collapse any other expanded items
+        document.querySelectorAll('.publication-item.expanded').forEach(other => {
+          if (other !== item) {
+            other.classList.remove('expanded');
+            const otherBody = other.querySelector('.publication-body');
+            if (otherBody) otherBody.style.display = 'none';
+          }
+        });
         
         if (isExpanded) {
           item.classList.remove('expanded');

@@ -5,6 +5,7 @@ class LanguageManager {
     this.translations = {};
     this.publicationsData = null;
     this.projectsData = null;
+    this.qualificationsData = null;
     this.init();
   }
 
@@ -17,6 +18,7 @@ class LanguageManager {
       this.loadHero();
       this.loadProjects();
       this.loadPublications();
+      this.loadQualifications();
       this.updatePageContent();
     } catch (error) {
       console.error('Error loading translations:', error);
@@ -37,7 +39,95 @@ class LanguageManager {
       this.loadHero();
       this.loadProjects();
       this.loadPublications();
+      this.loadQualifications();
       this.updatePageContent();
+    }
+  }
+
+  // Load qualifications from JSON file
+  async loadQualifications() {
+    const titleEl = document.getElementById('qualifications-title');
+    const tabsEl = document.getElementById('qualifications-tabs');
+    const contentEl = document.getElementById('qualifications-content');
+    if (!tabsEl || !contentEl) return;
+
+    try {
+      if (!this.qualificationsData) {
+        const response = await fetch('assets/utils/qualifications.json');
+        this.qualificationsData = await response.json();
+      }
+
+      const { labels, education, skills, languages } = this.qualificationsData;
+      const lang = this.currentLang;
+      const l = labels[lang];
+
+      if (titleEl) {
+        titleEl.textContent = l.sectionTitle;
+      }
+
+      tabsEl.innerHTML = `
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="education-tab" data-bs-toggle="tab" data-bs-target="#education" type="button" role="tab" aria-controls="education" aria-selected="true">${l.tabs.education}</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills" type="button" role="tab" aria-controls="skills" aria-selected="false">${l.tabs.skills}</button>
+        </li>
+      `;
+
+      const educationHtml = education.map(item => {
+        const degree = item.degree?.[lang] || item.degree?.en || '';
+        const institution = item.institution?.[lang] || item.institution?.en || '';
+        const year = item.year?.[lang] || item.year?.en || '';
+        const focusLabel = item.focusLabel?.[lang] || item.focusLabel?.en || '';
+        const focusTitle = item.focusTitle?.[lang] || item.focusTitle?.en || '';
+        const description = item.description?.[lang] || item.description?.en || '';
+
+        return `
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-card">
+              <h5 class="mb-1">${degree}</h5>
+              <div class="timeline-meta">${institution} — ${year}</div>
+              <div class="mt-2"><strong>${focusLabel}</strong>: ${focusTitle}</div>
+              <p class="mt-2 mb-0">${description}</p>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const skillsList = skills.technical?.[lang] || skills.technical?.en || [];
+      const trainingList = skills.training?.[lang] || skills.training?.en || [];
+
+      const languagesHtml = languages.map(item => {
+        const name = item.name?.[lang] || item.name?.en || '';
+        const level = item.level?.[lang] || item.level?.en || '';
+        return `<li class="list-group-item"><strong>${name}</strong> — ${level}</li>`;
+      }).join('');
+
+      contentEl.innerHTML = `
+        <div class="tab-pane fade show active" id="education" role="tabpanel" aria-labelledby="education-tab">
+          <div class="education-timeline">
+            ${educationHtml}
+          </div>
+        </div>
+        <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skills-tab">
+          <h5 class="mb-3">${l.technicalSkills}</h5>
+          <ul class="list-group mb-4">
+            ${skillsList.map(item => `<li class="list-group-item">${item}</li>`).join('')}
+          </ul>
+          <h5 class="mb-3">${l.training}</h5>
+          <ul class="list-group">
+            ${trainingList.map(item => `<li class="list-group-item">${item}</li>`).join('')}
+          </ul>
+                <h5 class="mt-4 mb-3">${l.tabs.languages}</h5>
+          <ul class="list-group">
+            ${languagesHtml}
+          </ul>
+        </div>
+      `;
+    } catch (error) {
+      console.error('Error loading qualifications:', error);
+      contentEl.innerHTML = '<p class="text-center text-muted">Failed to load qualifications.</p>';
     }
   }
 
@@ -45,6 +135,7 @@ class LanguageManager {
   async loadProjects() {
     const projectsContainer = document.getElementById('projects-list');
     const projectsTitle = document.getElementById('projects-title');
+    const filterContainer = document.getElementById('projects-filter');
     if (!projectsContainer) return;
 
     try {
@@ -53,16 +144,23 @@ class LanguageManager {
         this.projectsData = await response.json();
       }
 
-      const { projects, labels } = this.projectsData;
+      const { projects, labels, filters } = this.projectsData;
       const lang = this.currentLang;
       const l = labels[lang];
+      const filterList = filters || [];
 
       if (projectsTitle) {
         projectsTitle.textContent = l.sectionTitle;
       }
 
-      let html = '';
-      projects.forEach(project => {
+      const renderProjects = (filterId) => {
+        const normalizedFilter = filterId || 'all';
+        const filtered = normalizedFilter === 'all'
+          ? projects
+          : projects.filter(project => project.category === normalizedFilter);
+
+        let html = '';
+        filtered.forEach(project => {
         const title = project.title?.[lang] || project.title?.en || '';
         const description = project.description?.[lang] || project.description?.en || '';
         const role = project.role?.[lang] || project.role?.en || '';
@@ -112,9 +210,34 @@ class LanguageManager {
             </div>
           </div>
         `;
-      });
+        });
 
-      projectsContainer.innerHTML = html;
+        projectsContainer.innerHTML = html || '<div class="col-12"><p class="text-center text-muted">No projects found.</p></div>';
+      };
+
+      if (!this.currentProjectFilter) {
+        this.currentProjectFilter = 'all';
+      }
+
+      if (filterContainer && filterList.length) {
+        filterContainer.innerHTML = filterList.map(filter => {
+          const label = filter.label?.[lang] || filter.label?.en || filter.id;
+          const activeClass = filter.id === this.currentProjectFilter ? 'active' : '';
+          return `<button type="button" class="btn btn-sm btn-outline-primary filter-btn ${activeClass}" data-filter="${filter.id}">${label}</button>`;
+        }).join('');
+
+        filterContainer.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            this.currentProjectFilter = btn.dataset.filter;
+            filterContainer.querySelectorAll('.filter-btn').forEach(b => {
+              b.classList.toggle('active', b === btn);
+            });
+            renderProjects(this.currentProjectFilter);
+          });
+        });
+      }
+
+      renderProjects(this.currentProjectFilter);
     } catch (error) {
       console.error('Error loading projects:', error);
       projectsContainer.innerHTML = '<div class="col-12"><p class="text-center text-muted">Failed to load projects.</p></div>';
@@ -158,16 +281,13 @@ class LanguageManager {
                 <a class="nav-link" href="index.html">${this.t('navbar.home')}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">${this.t('navbar.about')}</a>
+                <a class="nav-link" href="qualifications.html">${this.t('navbar.about')}</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="projects.html">${this.t('navbar.projects')}</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="publications.html">${this.t('navbar.publications')}</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">${this.t('navbar.contact')}</a>
               </li>
             </ul>
             
@@ -182,6 +302,13 @@ class LanguageManager {
     `;
 
     navContainer.innerHTML = navbarHTML;
+
+    // Set active nav link based on current page
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    navContainer.querySelectorAll('.nav-link').forEach(link => {
+      const href = link.getAttribute('href');
+      link.classList.toggle('active', href === currentPage);
+    });
   }
 
   // Load hero component with current language

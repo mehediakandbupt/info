@@ -1,0 +1,150 @@
+{
+  "labels": {
+    "en": {
+      "sectionTitle": "Qualifications",
+      "tabs": {
+        "education": "Education",
+        "skills": "Skills",
+        "languages": "Languages"
+      },
+      "technicalSkills": "Technical Skills",
+      "training": "Professional Training",
+      "phdFocus": "PhD Thesis",
+      "msThesis": "MS Thesis",
+      "bsThesis": "BS Thesis"
+    },
+    "zh": {
+      "sectionTitle": "资质",
+      "tabs": {
+        "education": "教育背景",
+        "skills": "技能",
+        "languages": "语言能力"
+      },
+      "technicalSkills": "技术技能",
+      "training": "专业培训",
+      "phdFocus": "博士论文",
+      "msThesis": "硕士论文",
+      "bsThesis": "学士论文"
+    }
+  },
+  "education": [
+    {
+      "degree": {
+        "en": "PhD. in Control Science",
+        "zh": "控制科学博士"
+      },
+      "institution": {
+        "en": "BEIJING UNIVERSITY OF TECHNOLOGY",
+        "zh": "北京工业大学"
+      },
+      "year": {
+        "en": "Graduated: 2026",
+        "zh": "毕业：2026"
+      },
+      "focusLabel": {
+        "en": "PhD Thesis",
+        "zh": "博士论文"
+      },
+      "focusTitle": {
+        "en": "Research on Deep Learning Methods for Wafer Map Defect Pattern Analysis under Limited and Evolving Data Scenarios",
+        "zh": "面向少样本与动态晶圆图数据的缺陷模式深度学习分析方法研究"
+      },
+      "description": {
+        "en": "This thesis builds an automated wafer map inspection pipeline for semiconductor manufacturing under limited labels and evolving defect distributions. It integrates unsupervised pixel-level anomaly detection, semi-supervised defect segmentation, zero-shot defect pattern retrieval, and exemplar-free class-incremental learning to support accurate detection, fine-grained localization, scalable retrieval of unseen defects, and continual recognition as new defect types emerge—while respecting practical constraints such as data retention and memory limits.",
+        "zh": "本论文针对半导体制造中的晶圆图检测任务，构建了一个面向少样本与动态缺陷分布的自动化检测流程。该流程集成了无监督像素级异常检测、半监督缺陷分割、零样本缺陷模式检索和无样本增量学习等模块，实现了准确检测、细粒度定位、可扩展的未知缺陷检索及新缺陷类型的持续识别，同时兼顾数据保留和内存限制等实际约束。"
+      }
+    },
+    {
+      "degree": {
+        "en": "MS in Computer Technology",
+        "zh": "计算机技术硕士"
+      },
+      "institution": {
+        "en": "BEIJING UNIVERSITY OF POSTS AND TELECOMMUNICATIONS",
+        "zh": "北京邮电大学"
+      },
+      "year": {
+        "en": "Graduated: 2020",
+        "zh": "毕业：2020"
+      },
+      "focusLabel": {
+        "en": "MS Thesis",
+        "zh": "硕士论文"
+      },
+      "focusTitle": {
+        "en": "Research and Implementation of the Costume Generation for Scratch. 3.0",
+        "zh": "基于Scratch 3.0的服装生成研究与实现"
+      },
+      "description": {
+        "en": "This project integrates Scratch 3.0 with deep learning–based image translation to help students turn hand-drawn sketches into usable sprites and then apply cartoon-style rendering. It includes a sketch-to-image model with a lightweight MultiResU-Net–based generator to reduce artifacts and training cost, a Dense-CartoonGAN for end-to-end cartoonization with fewer parameters, and a Scratch-side application that connects both functions into an interactive workflow.",
+        "zh": "本项目将Scratch 3.0与基于深度学习的图像转换技术相结合，帮助学生将手绘草图转换为可用的角色形象，并应用卡通风格渲染。项目包括一个基于轻量级MultiResU-Net生成器的草图到图像模型，以减少伪影和训练成本；一个参数更少的Dense-CartoonGAN，用于端到端的卡通化处理；以及一个Scratch端应用，将两种功能连接成一个交互式工作流程。"
+      }
+    },
+    {
+      "degree": {
+        "en": "BS in Computer Science and Engineering",
+        "zh": "计算机科学与工程学士"
+      },
+      "institution": {
+        "en": "UNIVERSITY OF DEVELOPMENT ALTERNATIVE",
+        "zh": "UNIVERSITY OF DEVELOPMENT ALTERNATIVE"
+      },
+      "year": {
+        "en": "Graduated: 2015",
+        "zh": "毕业：2015"
+      },
+      "focusLabel": {
+        "en": "BS Thesis",
+        "zh": "学士论文"
+      },
+      "focusTitle": {
+        "en": "E-Commerce Web Application",
+        "zh": "电子商务网页应用"
+      },
+      "description": {
+        "en": "Developed a web-based E-Commerce platform using Java, featuring essential modules such as User Registration, Product Management, Shopping Cart, and Checkout. The system provided a complete online shopping experience with efficient data handling and user-friendly interface design.",
+        "zh": "使用Java开发了基于Web的电子商务平台，包含用户注册、商品管理、购物车与结账等核心模块。系统提供完整的在线购物体验，并具备高效数据处理与友好的界面设计。"
+      }
+    }
+  ],
+  "skills": {
+    "technical": {
+      "en": [
+        "Python, C, C++, C#, PyTorch, TensorFlow, OpenCV, Open3D, MATLAB, NumPy, Pandas, SQL.",
+        "Hugging Face, ChatGPT, LLaMA, DeepSeek, RAG, AI Agents, Prompt Engineering.",
+        "CNN/ViT-based Feature Extraction, Segmentation, Feature Matching, Object Localization, 3D Point Cloud Processing, GAN-based Image-to-Image Translation.",
+        "Microsoft Excel, Word, PowerPoint, Docker, Git, Data Analysis & Visualization.",
+        "Windows, Linux, Data Management & Recovery, Network Configuration, IP Phone Setup."
+      ],
+      "zh": [
+        "Python、C、C++、C#、PyTorch、TensorFlow、OpenCV、Open3D、MATLAB、NumPy、Pandas、SQL。",
+        "Hugging Face, ChatGPT, LLaMA, DeepSeek, RAG, AI Agents, Prompt Engineering.",
+        "基于CNN/ViT的特征提取、分割、特征匹配、目标定位、3D点云处理、基于GAN的图像到图像转换。",
+        "Microsoft Excel、Word、PowerPoint、Docker、Git、数据分析与可视化。",
+        "Windows、Linux、数据管理与恢复、网络配置、IP电话设置。"
+      ]
+    },
+    "training": {
+      "en": ["OOP in Java (J2EE)", "Web Development"],
+      "zh": ["Java面向对象编程（J2EE）", "Web开发"]
+    }
+  },
+  "languages": [
+    {
+      "name": {"en": "Bengali", "zh": "孟加拉语"},
+      "level": {"en": "Native", "zh": "母语"}
+    },
+    {
+      "name": {"en": "Chinese", "zh": "中文"},
+      "level": {"en": "HSK3", "zh": "HSK3"}
+    },
+    {
+      "name": {"en": "English", "zh": "英语"},
+      "level": {"en": "Fluent / Professional Working Proficiency", "zh": "流利 / 专业工作熟练"}
+    },
+    {
+      "name": {"en": "Hindi", "zh": "印地语"},
+      "level": {"en": "Conversational Proficiency", "zh": "日常交流"}
+    }
+  ]
+}
