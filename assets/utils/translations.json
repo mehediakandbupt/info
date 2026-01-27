@@ -5,6 +5,7 @@
       "home": "Home",
       "about": "Qualifications",
       "projects": "Projects",
+      "experience": "Work Experience",
       "publications": "Publications"
     },
     "hero": {
@@ -54,6 +55,7 @@
       "home": "主页",
       "about": "资质",
       "projects": "项目",
+      "experience": "工作经历",
       "publications": "出版物"
     },
     "hero": {

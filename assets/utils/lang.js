@@ -17,6 +17,7 @@ class LanguageManager {
       this.loadNavbar();
       this.loadHero();
       this.loadProjects();
+      this.loadExperience();
       this.loadPublications();
       this.loadQualifications();
       this.updatePageContent();
@@ -38,6 +39,7 @@ class LanguageManager {
       this.loadNavbar();
       this.loadHero();
       this.loadProjects();
+      this.loadExperience();
       this.loadPublications();
       this.loadQualifications();
       this.updatePageContent();
@@ -244,6 +246,73 @@ class LanguageManager {
     }
   }
 
+  // Load work experience from JSON file
+  async loadExperience() {
+    const experienceContainer = document.getElementById('experience-list');
+    const experienceTitle = document.getElementById('experience-title');
+    if (!experienceContainer) return;
+
+    try {
+      if (!this.experienceData) {
+        const response = await fetch('assets/utils/workexperience.json');
+        this.experienceData = await response.json();
+      }
+
+      const { experiences, labels } = this.experienceData;
+      const lang = this.currentLang;
+      const l = labels[lang];
+
+      if (experienceTitle) {
+        experienceTitle.textContent = l.sectionTitle;
+      }
+
+      let html = '';
+      experiences.forEach(exp => {
+        const title = exp.title?.[lang] || exp.title?.en || '';
+        const company = exp.company?.[lang] || exp.company?.en || '';
+        const location = exp.location?.[lang] || exp.location?.en || '';
+        const period = exp.period?.[lang] || exp.period?.en || exp.period || '';
+        const summary = exp.summary?.[lang] || exp.summary?.en || '';
+        const highlights = exp.highlights?.[lang] || exp.highlights?.en || [];
+        const tech = exp.tech || [];
+
+        html += `
+          <div class="experience-card card">
+            <div class="card-body">
+              <div class="experience-header">
+                <h3 class="experience-title">${title}</h3>
+                <div class="experience-company">${company}</div>
+              </div>
+              <div class="experience-meta">
+                ${location ? `<span class="meta-item"><i class="fas fa-map-marker-alt"></i> ${location}</span>` : ''}
+                ${period ? `<span class="meta-item"><i class="fas fa-calendar-alt"></i> ${period}</span>` : ''}
+              </div>
+              ${summary ? `<p class="experience-summary">${summary}</p>` : ''}
+              ${highlights.length ? `
+                <ul class="experience-highlights">
+                  ${highlights.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+              ` : ''}
+              ${tech.length ? `
+                <div class="experience-tech">
+                  <div class="experience-tech-label">${l.tech}</div>
+                  <div class="experience-tags">
+                    ${tech.map(item => `<span class="experience-tag">${item}</span>`).join('')}
+                  </div>
+                </div>
+              ` : ''}
+            </div>
+          </div>
+        `;
+      });
+
+      experienceContainer.innerHTML = html || '<div class="col-12"><p class="text-center text-muted">No experience found.</p></div>';
+    } catch (error) {
+      console.error('Error loading experience:', error);
+      experienceContainer.innerHTML = '<div class="col-12"><p class="text-center text-muted">Failed to load experience.</p></div>';
+    }
+  }
+
   // Get translation text
   t(key) {
     const keys = key.split('.');
@@ -282,6 +351,9 @@ class LanguageManager {
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="qualifications.html">${this.t('navbar.about')}</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="experience.html">${this.t('navbar.experience')}</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="projects.html">${this.t('navbar.projects')}</a>

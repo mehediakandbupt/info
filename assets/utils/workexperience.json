@@ -1,0 +1,84 @@
+{
+  "labels": {
+    "en": {
+      "sectionTitle": "Work Experience",
+      "tech": "Tech Stack"
+    },
+    "zh": {
+      "sectionTitle": "工作经历",
+      "tech": "技术栈"
+    }
+  },
+  "experiences": [
+    {
+      "id": "exp-001",
+      "title": {
+        "en": "Teaching Assistant",
+        "zh": "助教"
+      },
+      "company": {
+        "en": "Beijing-Dublin International College, Beijing University of Technology",
+        "zh": "北京工业大学北京都柏林国际学院"
+      },
+      "location": {
+        "en": "Beijing, China",
+        "zh": "中国 北京"
+      },
+      "period": {
+        "en": "2024–2025",
+        "zh": "2024–2025"
+      },
+      "highlights": {
+        "en": [
+          "Led tutorials and supported course delivery through interactive discussions and clear explanations.",
+          "Produced course resources including labs, assignments, solution guides, and weekly schedules.",
+          "Evaluated coursework and exams using consistent rubrics to ensure fair grading.",
+          "Supported student progress through office hours and targeted feedback."
+        ],
+        "zh": [
+          "组织习题课并支持课程教学，通过互动讨论和清晰讲解帮助学生理解重点内容。",
+          "编制课程资源，包括实验、作业、解答与周计划安排。",
+          "按照统一评分标准评阅作业与考试，确保公平一致。",
+          "通过答疑与反馈支持学生学习进展。"
+        ]
+      },
+      "tech": ["Teaching", "Course Design", "Assessment", "Academic Support"]
+    },
+    {
+      "id": "exp-002",
+      "title": {
+        "en": "Junior Software Engineer",
+        "zh": "初级软件工程师"
+      },
+      "company": {
+        "en": "TechnoDhaka",
+        "zh": "TechnoDhaka"
+      },
+      "location": {
+        "en": "Dhaka, Bangladesh",
+        "zh": "孟加拉国 达卡"
+      },
+      "period": {
+        "en": "2016–2018",
+        "zh": "2016–2018"
+      },
+      "highlights": {
+        "en": [
+          "Shipped and maintained internal business systems in ASP.NET (C#) with SQL backends for retail and enterprise operations.",
+          "Built modules for sales, inventory, billing, and reporting with validation logic and schema updates.",
+          "Troubleshot production defects, delivered patches, and supported releases and data migrations.",
+          "Developed an Android client in Java with SQLite for local persistence and core features.",
+          "Provided IT support including remote desktop assistance and basic Cisco/network configuration."
+        ],
+        "zh": [
+          "使用 ASP.NET（C#）与 SQL 后端交付并维护零售与企业内部业务系统。",
+          "开发销售、库存、计费与报表模块，完善校验逻辑并优化数据库结构。",
+          "定位并修复生产问题，发布补丁，支持版本发布与数据迁移。",
+          "使用 Java 与 SQLite 开发 Android 客户端，实现本地数据存储与核心功能。",
+          "提供IT支持，包括远程桌面协助与基础 Cisco/网络配置。"
+        ]
+      },
+      "tech": ["ASP.NET", "C#", "SQL", "Android", "Java", "SQLite", "Cisco"]
+    }
+  ]
+}

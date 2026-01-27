@@ -1,7 +1,7 @@
 /* Qualifications Timeline */
 .education-timeline {
   position: relative;
-  padding-left: 28px;
+  padding: 0 14px;
   margin: 0;
 }
 
@@ -73,9 +73,17 @@
   color: #343a40;
 }
 
+#qualifications-content .tab-pane {
+  padding: 1.5rem;
+}
+
+#qualifications-content #education {
+  padding: 0.5rem 1rem;
+}
+
 @media (max-width: 576px) {
   .education-timeline {
-    padding-left: 22px;
+    padding: 0 14px;
   }
 
   .timeline-dot {
