@@ -336,13 +336,6 @@ class LanguageManager {
                   <hr class="my-2">
 
                   <div class="info-item">
-                    <span class="info-label">${this.t('profile.age')}</span>
-                    <p class="info-value">${this.t('profile.ageValue')}</p>
-                  </div>
-
-                  <hr class="my-2">
-
-                  <div class="info-item">
                     <span class="info-label">${this.t('profile.email')}</span>
                     <p class="info-value">
                       <a href="mailto:${this.t('profile.emailValue')}" class="text-decoration-none">${this.t('profile.emailValue')}</a>
