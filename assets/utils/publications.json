@@ -38,7 +38,7 @@
       "location": "Ordos, China",
       "eiIndexed": true,
       "date": "2025-09",
-      "doi": "",
+      "doi": "https://doi.org/10.1109/ACAIT67930.2025.11521936",
       "authors": ["Mohammad Mehedi Hasan", "Naigong Yu", "Imran Khan Mirani"],
       "abstract": {
         "en": "In semiconductor manufacturing, effectively retrieving wafer map defect patterns is essential for streamlining production and improving yield. However, the sheer volume and variability of defect data and the continuous emergence of novel categories render manual analysis infeasible, necessitating automated solutions for scalable defect retrieval. This paper proposes a zero-shot wafer-map retrieval framework that learns multi-scale representations by fusing aggregated attention maps and embeddings from a dual-branch Vision Transformer, enabling spatially guided focus on salient defect regions. In addition, integrating a composite loss function that combines curriculum learning with proxy-based metric learning significantly strengthens the model's adaptability to new and evolving defect types, enabling consistent retrieval of previously unseen defect patterns. Experimental results on the WM-811K and MixedWM38 datasets highlight the effectiveness of our approach, with Recall@1 scores of 0.921 and 0.782, Recall@8 scores of 0.985 and 0.961, and NMI values of 0.452 and 0.648, respectively, consistently surpassing previous state-of-the-art (SOTA) techniques in both retrieval accuracy and clustering quality.",
